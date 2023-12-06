@@ -1,3 +1,25 @@
 body {
-	background: #a9a9a9;
+	background: #A9B388;
+}
+
+.nav-background {
+	background: #5F6F52;
+}
+
+.banner {
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,0.8)), url(../img/portrait-call-center-woman.jpg);
+	background-size: cover;
+	color: white;
+}
+.btn-background {
+	background: #B99470;
+}
+
+.my-card {
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px #888888;
 }
