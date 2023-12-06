@@ -13,7 +13,7 @@ public class HomeController {
 	@Autowired
 	private UserRepository userRepository;
 
-	@RequestMapping("/home")
+	@RequestMapping("/")
 	public String Home(Model model) {
 		model.addAttribute("title", "Home - Smart Contact Manager");
 		return "Home";
