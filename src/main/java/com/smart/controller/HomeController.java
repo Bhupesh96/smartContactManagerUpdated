@@ -3,6 +3,7 @@ package com.smart.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,6 +13,7 @@ import com.smart.helper.Message;
 import com.smart.repo.UserRepository;
 
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
 
 @Controller
 public class HomeController {
@@ -40,7 +42,7 @@ public class HomeController {
 
 	// method for handling user registration
 	@PostMapping("/do_register")
-	public String registerUser(User user, @RequestParam(value = "agreement", defaultValue = "false") boolean agreement,
+	public String registerUser(@Valid User user, @RequestParam(value = "agreement", defaultValue = "false") boolean agreement,
 			HttpSession session, Model model) {
 		try {
 			if (!agreement) {
